@@ -1,0 +1,29 @@
+﻿@model CarSales.Models.Sales
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Sales Details</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">Make</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model => model.Make)</dd>
+            <dt class="col-sm-2">Model</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model => model.Model)</dd>
+            <dt class="col-sm-2">Price</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model => model.Price)</dd>
+            <dt class="col-sm-2">Date Listed</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model => model.DateListed)</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
